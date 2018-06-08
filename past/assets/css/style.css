@@ -1,0 +1,156 @@
+head,
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    background: #64B5F6;
+}
+#loading {
+    position: absolute;
+    left: 0; 
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #ffffff;
+    z-index: 100500;
+    transition: all 0.75s ease-in-out;
+}
+#loading img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%)
+               translateY(-50%);
+    
+}
+#water_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#water_background video {
+    position: absolute;
+    z-index: 2;
+}
+#static_image {
+    position: absolute;
+    z-index: 1;
+}
+#top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+#bottom {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    z-index: 3;
+}
+#logo {
+    padding: 10px;
+    height: 12vh;
+}
+.left {
+    display: inline-block;
+    float:left;
+}
+.right {
+    display: inline-block;
+    float:right;
+}
+#googleplay {
+    height: 12vh;
+}
+#logo img, #googleplay img {
+    max-width: 100%;
+    max-height: 100%;
+}
+a.btn {
+   position: relative;
+   display: inline-block;
+   margin: 5px 0px;
+   width: 11vh;
+   height: 11vh;
+}
+a.btn:active > .btn-image {
+    width: 7vh;
+    height: 7vh;
+    top: 1vh;
+    left: 1vh;
+}
+a.btn:active > .btn-shadow {
+    width: 7vh;
+    height: 7vh;
+    top: 1vh;
+    left: 1vh;
+}
+a.btn:hover > .btn-image {
+    width: 10.25vh;
+    height: 10.25vh;
+    top: 0.125vh;
+    left: 0.125vh;
+}
+a.btn:hover > .btn-shadow {
+    width: 10.1vh;
+    top: 0.325vh;
+    left: 0.325vh;
+}
+a.btn * {
+    transition: all 0.05s ease-in-out;
+}
+.btn-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10.5vh;
+    height: 10.5vh;
+    z-index: 4;
+}
+.btn-image img {
+    width: 100%;
+    height: 100%;
+}
+.btn-shadow {
+    position: absolute;
+    top: 0.3vh;
+    left: 0.3vh;
+    background-image: url(../img/button-shadow.png);
+    background-size: cover;
+    width: 10.5vh;
+    height: 10.5vh;
+    z-index: 3;
+}
+#container {
+    max-width: 800px;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#background {
+    background: #64B5F6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/*
+@media (orientation: landscape) {
+    #googleplay img {
+        height: 15vh;
+    }
+}
+@media (orientation: portrait) {
+    #googleplay img {
+        height: 10vh;
+    }
+}*/

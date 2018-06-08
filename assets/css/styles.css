@@ -1,0 +1,441 @@
+html,
+head,
+body {
+    background: #42A5F5;
+    margin: 0;
+    padding: 0;
+    font-family: "ONRAMP", "Russo One", monospace;
+    color: white;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+@font-face {
+    font-family: "ONRAMP";
+    font-size: 200%;
+    src: url('../ONRAMP.ttf') format("truetype");
+}
+.video {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.slideshow {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#main_wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+#faq_wrapper #main {
+    width: 75%;
+    margin-left: 12.5%;
+}
+#phone_wrapper {
+    position: absolute;
+    width: 40%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+#phone {
+    position: relative;
+    width: 75%;
+    margin-left: 12.5%;
+    padding-top: 110%;
+}
+#phone_template {
+    z-index: 1;
+    display: inline-block;
+    position: absolute;
+    width: 30vw;
+    height: 95%;
+    top: 5%;
+    background: url(../img/phone-template.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#video_wrapper {
+    display: block;
+    z-index: 1;
+    position: absolute;
+    top: 16.2%;
+    left: 19.5%;
+    width: 60%;
+    height: 73.25%;
+    /* overflow: hidden; */
+}
+#video_wrapper video {
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+#content_wrapper {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+#content {
+    position: relative;
+    width: 95%;
+    margin: 2.5% 4% 0 2.5%;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+#logo {
+    background: url(../img/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50vw;
+    padding-top: 35%;
+    display: block;
+    margin: 0 auto;
+}
+#text {
+}
+.ru {
+    font-size: 74%;
+}
+#links * {
+    display: block;
+}
+#FAQ {
+    display: inline-block;
+    margin-top: 2vh;
+}
+a {
+    color: #0D47A1;
+}
+a:visited {
+    color: #311B92;
+}
+#badges {
+    text-align: center;
+    padding: 2.5% 0;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    width: 85%;
+    margin: 0 auto;
+}
+#badges > * {
+    cursor: pointer;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30%;
+    padding-top: 12%;
+}
+#googleplay-badge {
+    background-image: url(/assets/img/google-play.png);
+}
+#applestore-badge {
+    background-size: 90%;
+    background-image: url(/assets/img/app-store.png);
+}
+#amazon-badge {
+    background-size: 80%;
+    background-image: url(/assets/img/amazon-store.png);
+}
+#content {
+    font-size: 4.25vh;
+    text-align: center;
+}
+/* unvisited link */
+a:link {
+    color: #1565C0;
+}
+/* visited link */
+a:visited {
+    color: #1565C0;
+}
+/* mouse over link */
+a:hover {
+    color: #1565C0;
+}
+/* selected link */
+a:active {
+    color: #1565C0;
+}
+@media screen and (max-aspect-ratio: 2/3) {
+    #logo {
+        padding-top: 40% !important;
+    }
+    * {
+        font-size: 3.75vh !important;
+    }
+    #badges > * {
+        width: 32vw !important;
+        padding-top: 20% !important;
+    }
+}
+@media screen and (max-aspect-ratio: 5/4) {
+    * {
+        text-align: center;
+        font-size: 4.25vh;
+        overflow: hidden;
+    }
+    #content_wrapper {
+        width: 100%;
+    }
+    #content {
+        z-index: 10;
+        width: 80%;
+        margin: 5% 10% 0 10%;
+    }
+    #phone_wrapper {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    #copyright_privacy_policy {
+        position: absolute;
+        bottom: 1vh;
+        left: 0;
+        right: 0;
+        font-size: 3vh;
+        z-index: 80;
+        text-align: center;
+        width: 100%;
+    }
+    #phone {
+        overflow: hidden;
+    }
+    #video_wrapper {
+        min-width: 110%;
+        min-height: 110%;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* filter: blur(2px); */
+        z-index: 5;
+    }
+    #video_wrapper video {
+        object-fit: cover;
+    }
+    canvas {
+        filter: blur(2px);
+    }
+    #bg-grey {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 6;
+        background: rgba(0, 0, 0, 0.35);
+    }
+    #phone_template,
+    #phone_wrapper,
+    #phone,
+    #main {
+        position: initial;
+    }
+    #badges > * {
+        width: 32vw;
+        padding-top: 18%;
+    }
+    #logo {
+        width: 83vw;
+        padding-top: 30%;
+    }
+    #content {
+        font-size: 5.4vh;
+    }
+    #loader {
+        background-size: 25% !important;
+    }
+    #loading_text {
+        top: 60% !important;
+    }
+    /* unvisited link */
+
+    a:link {
+        color: #64b5f6;
+    }
+    /* visited link */
+
+    a:visited {
+        color: #64b5f6;
+    }
+    /* mouse over link */
+
+    a:hover {
+        color: #64b5f6;
+    }
+    /* selected link */
+
+    a:active {
+        color: #64b5f6;
+    }
+}
+#copyright_privacy_policy:not(a) {
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+#copyright_privacy_policy {
+    text-align: center;
+    padding: 0 25px;
+    box-sizing: border-box;
+}
+@media screen and (min-aspect-ratio: 5/4) and (max-aspect-ratio: 10/4) {
+    #main {
+        z-index: 20;
+    }
+    #main_wrapper {
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 20;
+        overflow: hidden;
+    }
+    #copyright_privacy_policy {
+        position: absolute;
+        bottom: 1vh;
+        left: 0;
+        right: 0;
+        font-size: 3vh;
+        z-index: 80;
+        text-align: center;
+    }
+}
+@media screen and (max-aspect-ratio: 9/16) {
+}
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+#FAQ,
+#press_kit,
+#support {
+    display: block;
+}
+#main {
+    z-index: 2;
+}
+#play_wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 98;
+    transition: all 0.5s ease-in-out;
+    background: white;
+}
+#loading_text {
+    color: #64b5f6;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+    font-size: 4vh;
+    display: block;
+    text-align: center;
+    top: 55%;
+    position: absolute;
+    width: 100%;
+    padding-top: 5px;
+}
+#playbtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease-in-out;
+    border-radius: 50%;
+    background-image: url(../img/play.png);
+    background-repeat: no-repeat;
+    background-position: 55% center;
+    background-size: 50%;
+}
+#playbtn:hover {
+    background-color: rgba(0, 0, 0, 0.65);
+}
+#playbtn:active {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+.IIV::-webkit-media-controls-play-button,
+.IIV::-webkit-media-controls-start-playback-button {
+    opacity: 0;
+    pointer-events: none;
+    width: 5px;
+}
+
+.owl-dot span {
+    /* z-index: 10; */
+    transition: opacity .25s ease-in-out;
+    width: 7px;
+    height: 7px;
+    background: white;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+.owl-dot {
+    display: inline-block;
+}
+.owl-dots {
+    text-align: center;
+}
+.owl-dot {
+    margin: 3px 2.5px;
+}
+.owl-dot.active > span {
+    opacity: 0.95;
+    z-index: 10;
+}
+.owl-controls {
+    margin-top: -18px;
+}
+.owl-carousel.owl-theme.owl-loaded {
+    height: 100%;
+}
+.owl-stage-outer {
+    height: 100%;
+}
+.owl-stage {
+    height: 100%;
+}
+.owl-item {
+    height: 100%;
+    display: block;
+}
+.owl-item > div {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 70%;
+}

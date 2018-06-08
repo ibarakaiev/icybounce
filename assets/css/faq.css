@@ -1,0 +1,54 @@
+head, body, html {
+	background: #42A5F5;
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans';
+	color: white;
+}
+
+#main_wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+#main {
+	width: 75%;
+	margin: 0% 12.5%;
+}
+
+p,h1,h2,h3,h4,h5,h6 {
+	margin: 2.5px 0;
+}
+#bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+#logo {
+	width: 40%;
+	height: 25vmax;
+	min-height: 250px;
+	display: inline-block;
+	vertical-align: middle;
+    object-fit: contain;
+}
+#header h1 {
+	display: inline-block;
+	vertical-align: middle;
+	width: 59%;
+	text-align: center;
+}
+
+.faq_el {
+	margin: 5% 0;
+}
+
+#back {
+	text-align: center;
+	margin: 5%;
+	width: 100%;
+}
